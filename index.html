@@ -1,53 +1,63 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="tezt" content="zest">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css" media="screen" type="text/css">
-    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>hopeforderin</title>
-<meta name="generator" content="Jekyll v3.7.3" />
-<meta property="og:title" content="hopeforderin" />
-<meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://hopeforderin.org/" />
-<meta property="og:url" content="http://hopeforderin.org/" />
-<meta property="og:site_name" content="hopeforderin" />
-<script type="application/ld+json">
-{"name":"hopeforderin","@type":"WebSite","url":"http://hopeforderin.org/","headline":"hopeforderin","@context":"http://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+}
+.bgimg-1 {
+  background-image: url("https://static.youcaring.com/api/uploads/fundraisers/1082570/bf584c32-c997-41f9-b3f1-e7908c716501_profile.jpg");
+  height: 100%;
+}
 
-  </head>
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
 
-  <body>
-    <header>
-      <div class="inner">
-        <a href="http://hopeforderin.org/">
-          <h1>Hope for Derin</h1>
-        </a>
-      </div>
-    </header>
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <p></p>
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+</style>
+</head>
+<body>
 
-        </section>
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">FULL PAGE</span><br>
+    <span class="border">BACKGROUND IMAGE</span>
+  </div>
+</div>
 
-  
-      </div>
-    </div>
+<p style="padding:5px 15px">This example creates a full page background image. Try to resize the browser window to see how it always will cover the full screen (when scrolled to top), and that it scales nicely on all screen sizes.</p>
 
-    
-  </body>
+</body>
 </html>
-
