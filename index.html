@@ -1,8 +1,8 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
 <style>
 body, html {
   height: 100%;
@@ -56,11 +56,36 @@ h3 {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
 }
+
+  
+.langBtn{
+  border: none;
+  background-color: transparent;
+   outline: none;
+  height:66px;
+  width:66px;
+  background-size: 66px 66px;
+}
+
+#trk{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/31/Turkey-orb.png")
+}
+
+#eng{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/ff/United-States-orb.png")
+}
+  
+  #localizeBtns{
+    position:absolute;
+    top: 25px;
+    right: 25px; 
+  }  
 
 </style>
 </head>
@@ -72,13 +97,41 @@ h3 {
     <span class="border"><a title="Donate" href="https://www.youcaring.com/demetdulkara-1082570?fb_action_ids=10156168951834727&fb_action_types=youcaringcom%3Adonate">CLICK HERE TO DONATE</a></span>
 <br/>
     -->
-    <a class="button" href="https://www.youtube.com/embed/gMx5t3xSFM4?autoplay=1">OUR STORY</a>
+    <a class="button localize" id="ourStoryBtn" href="https://www.youtube.com/embed/gMx5t3xSFM4?autoplay=1">OUR STORY</a>
     <br/><br/>
-    <a class="button" href="https://www.youcaring.com/demetdulkara-1082570?fb_action_ids=10156168951834727&fb_action_types=youcaringcom%3Adonate">CLICK HERE TO DONATE</a>
+    <a class="button localize" id="donateHereBtn" href="https://www.youcaring.com/demetdulkara-1082570?fb_action_ids=10156168951834727&fb_action_types=youcaringcom%3Adonate">CLICK HERE TO DONATE</a>
 
-  
+   
   </div>
 </div>
-
+   <div id="localizeBtns">
+    <button id="eng" class="langBtn"></button>
+    <button id="trk" class="langBtn"></button>
+    </div>
+  
+<script>
+   var strings = {
+      ourStoryBtn: {
+        eng: 'Our Story',
+        trk: 'Hikayemiz'
+      },
+      donateHereBtn: {
+        eng: 'Click Here To Donate',
+        trk: 'Bağış'
+      }
+  };
+    
+  var localizedCtrls = $('.localize');  
+  $('.langBtn').on('click',function(){
+    var lng = $(this).attr('id');
+    var id, ctrl;
+    alert('foo');
+    localizedCtrls.each(function(){    
+      ctrl = $(this);
+      id = ctrl.attr('id');
+      ctrl.html(strings[id][lng]);      
+    });
+  });
+  </script>  
 </body>
 </html>
