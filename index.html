@@ -1,136 +1,176 @@
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  position: relative;
-  opacity: 0.65;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font: 400 15px/1.8 "Lato", sans-serif;
+      color: #777;
+    }
 
-}
-.bgimg-1 {
-  background-image: url("https://i.imgur.com/ELeQAIm.jpg");
-  height: 100%;
-}
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      position: absolute;
+      opacity: 0.75;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: transparent;
 
-.caption {
-  position: absolute;
-  left: 0;
-  top: 80%;
-  width: 100%;
-  text-align: center;
-  color: #ff0000;
-}
+    }
 
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
+    .bgimg-1 {
+      background-image: url("https://i.imgur.com/ELeQAIm.jpg");
+    }
 
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
-  background-color: #e00;
-}
+    .bgimg-2 {
+      background-image: url("https://i.imgur.com/Q7Jicjm.jpg");
+    }
+    
+    .bgimg-3 {
+      background-image: url("https://i.imgur.com/IoDyBO0.jpg");
+    }
 
-  .button {
-    background-color: #bb0000;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
+    #slideshow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
 
-  
-.langBtn{
-  border: none;
-  background-color: transparent;
-   outline: none;
-  height:66px;
-  width:66px;
-  background-size: 66px 66px;
-}
+    #container {
+      text-align: center;
+    }
 
-#trk{
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/31/Turkey-orb.png")
-}
+    #buttons {
+      position: absolute;
+      bottom: 5px;
+      left: 0%;
+      right: 0%;
+      opacity: .85;
+      margin-bottom: 10px;
+    }
 
-#eng{
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/ff/United-States-orb.png")
-}
-  
-  #localizeBtns{
-    position:absolute;
-    top: 25px;
-    right: 25px; 
-  }  
+    h3 {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font: 20px "Lato", sans-serif;
+      color: #111;
+      background-color: #e00;
+    }
 
-</style>
+    .button {
+      border-radius: 4px;
+      width: 180px;
+      background-color: #bb0000;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      font-size: 16px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+
+    .langBtn {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      height: 66px;
+      width: 66px;
+      background-size: 66px 66px;
+    }
+
+    #trk {
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/31/Turkey-orb.png")
+    }
+
+    #eng {
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/ff/United-States-orb.png")
+    }
+
+    #localizeBtns {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+    }
+
+    </style>
 </head>
+
 <body>
-
-<div class="bgimg-1">
-  <div class="caption">
-    <!--
-    <span class="border"><a title="Donate" href="https://www.youcaring.com/demetdulkara-1082570?fb_action_ids=10156168951834727&fb_action_types=youcaringcom%3Adonate">CLICK HERE TO DONATE</a></span>
-<br/>
-    -->
-    <a class="button localize" id="ourStoryBtn" href="https://www.youtube.com/embed/gMx5t3xSFM4?autoplay=1">OUR STORY</a>
-    <br/><br/>
-    <a class="button localize" id="donateHereBtn" href="https://www.youcaring.com/demetdulkara-1082570?fb_action_ids=10156168951834727&fb_action_types=youcaringcom%3Adonate">CLICK HERE TO DONATE</a>
-
-   
-  </div>
-</div>
-   <div id="localizeBtns">
-    <button id="eng" class="langBtn"></button>
-    <button id="trk" class="langBtn"></button>
+  <div id="container">
+    <div id="slideshow">
+      <div class="bgimg-1">
+      </div>
+      <div class="bgimg-2">
+      </div>
+      <div class="bgimg-3">
+      </div>
     </div>
-  
-<script>
-   var strings = {
+
+    <div id="localizeBtns">
+      <button id="eng" class="langBtn"></button>
+      <button id="trk" class="langBtn"></button>
+    </div>
+
+    <div id="buttons">
+      <a class="button localize" id="ourStoryBtn" href="https://www.youtube.com/embed/gMx5t3xSFM4?autoplay=1">OUR STORY</a>
+      <br/><br/>
+      <a class="button localize" id="donateHereBtn" href="https://www.youcaring.com/demetdulkara-1082570?fb_action_ids=10156168951834727&fb_action_types=youcaringcom%3Adonate">DONATE</a>
+      <a class="button localize" id="updatesBtn" href="">UPDATES</a>
+    </div>
+
+  </div>
+
+  <script>
+    // cross-fade background images
+    $("#slideshow > div:gt(0)").hide();
+    setInterval(function() {
+      $('#slideshow > div:first')
+        .fadeOut(2000)
+        .next()
+        .fadeIn(2000)
+        .end()
+        .appendTo('#slideshow');
+    }, 6000);
+    var strings = {
       ourStoryBtn: {
         eng: 'Our Story',
         trk: 'Hikayemiz'
       },
       donateHereBtn: {
-        eng: 'Click Here To Donate',
+        eng: 'Donate',
         trk: 'Bağış'
+      },
+      updatesBtn: {
+        eng: 'Updates',
+        trk: 'Haberler'
       }
-  };
-    
-  var localizedCtrls = $('.localize');  
-  $('.langBtn').on('click',function(){
-    var lng = $(this).attr('id');
-    var id, ctrl;
-    localizedCtrls.each(function(){    
-      ctrl = $(this);
-      id = ctrl.attr('id');
-      ctrl.html(strings[id][lng]);      
+    };
+    // language toggle
+    var localizedCtrls = $('.localize');
+    $('.langBtn').on('click', function() {
+      var lng = $(this).attr('id');
+      var id, ctrl;
+      localizedCtrls.each(function() {
+        ctrl = $(this);
+        id = ctrl.attr('id');
+        ctrl.html(strings[id][lng]);
+      });
     });
-  });
-  </script>  
+  </script>
 </body>
+
 </html>
