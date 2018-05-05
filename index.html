@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   <style>
     body,
@@ -88,6 +89,12 @@
       top: 10px;
       right: 10px;
     }
+	
+	#shareBtns {
+	  position: absolute;
+	  top: 10px;
+	  left: 10px;
+	}
 
     #slideshow {
       position: absolute;
@@ -120,7 +127,13 @@
       </div>
     </div>
 
-    <div id="localizeBtns">
+	
+	
+    <div id="shareBtns">
+      <a href="https://twitter.com/HopeForDerin?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @HopeForDerin</a>
+    </div>
+	
+	<div id="localizeBtns">
       <button id="eng" class="langBtn"></button>
       <button id="trk" class="langBtn"></button>
     </div>
